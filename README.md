@@ -16,7 +16,6 @@ CELLAR_ADDON_KEY_ID=
 CELLAR_ADDON_KEY_SECRET=
 CELLAR_ADDON_REGION=fr
 CELLAR_ADDON_TIMEOUT_SIGNED_URL=3600
-CELLAR_BUCKET=example-bucket
 ```
 
 - In module where you want use this module, add this :
