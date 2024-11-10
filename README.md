@@ -1,5 +1,7 @@
 # Slick Nestjs Cellar
 
+Available on npmjs.org : [@slickteam/nestjs-cellar](https://www.npmjs.com/package/@slickteam/nestjs-cellar)
+
 ## Usage
 
 - Install dependency
@@ -34,10 +36,10 @@ class ExempleModule {}
 
 Nestjs
 
-- `@nestjs/common`: `^10.4.5`
-- `@nestjs/config`: `^3.2.3`
+- `@nestjs/common`: `^10.4.7`
+- `@nestjs/config`: `^3.3.0`
 
 Cellar (AWS)
 
-- `@aws-sdk/client-s3`: `^3.673.0`
-- `@aws-sdk/s3-request-presigner`: `^3.673.0`
+- `@aws-sdk/client-s3`: `^3.688.0`
+- `@aws-sdk/s3-request-presigner`: `^3.688.0`

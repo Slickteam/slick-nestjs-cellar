@@ -25,8 +25,8 @@ importers:
         specifier: ^10.4.7
         version: 10.4.7
       '@slickteam/prettier':
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: ^1.0.3
+        version: 1.0.3
       '@types/node':
         specifier: ^22.9.0
         version: 22.9.0
@@ -327,8 +327,8 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
 
-  '@slickteam/prettier@1.0.2':
-    resolution: {integrity: sha512-f7cEcrZixEkpgaP1rumxHHST+0jP8dWn/Hx66Mr07TCJYR1LZhG/MeKGMKc/4XHt8ZLvFwtFSdchVNQUIMMGdQ==}
+  '@slickteam/prettier@1.0.3':
+    resolution: {integrity: sha512-mPyULP61nruxhHz1Ggw1jCMpEpoidxw/tzw1tD67hisEH5sxKl+54n3q12UTfqT4oV8nhYzJq2ZbIYBBwbvYqg==}
 
   '@smithy/abort-controller@3.1.6':
     resolution: {integrity: sha512-0XuhuHQlEqbNQZp7QxxrFTdVWdwxch4vjxYgfInF91hZFkPxf9QDrdQka0KfxFMPqLNzSw0b95uGTrLliQUavQ==}
@@ -2189,7 +2189,7 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@slickteam/prettier@1.0.2':
+  '@slickteam/prettier@1.0.3':
     dependencies:
       prettier: 3.3.3
 
