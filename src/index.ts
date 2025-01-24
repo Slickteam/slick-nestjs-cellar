@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common';
+
 import { CellarBucketObjectListContentItem } from './cellar.interface';
 import { CellarService } from './cellar.service';
 

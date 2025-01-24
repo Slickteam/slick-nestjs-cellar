@@ -11,6 +11,7 @@ import {
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 import { Injectable, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
+
 import { CellarBucketObjectListContentItem } from './cellar.interface';
 
 const logger = new Logger('CellarService');

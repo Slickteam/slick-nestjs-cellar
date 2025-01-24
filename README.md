@@ -36,10 +36,10 @@ class ExempleModule {}
 
 Nestjs
 
-- `@nestjs/common`: `^10.4.7`
-- `@nestjs/config`: `^3.3.0`
+- `@nestjs/common`: `^11.0.5`
+- `@nestjs/config`: `^4.0.0`
 
 Cellar (AWS)
 
-- `@aws-sdk/client-s3`: `^3.688.0`
-- `@aws-sdk/s3-request-presigner`: `^3.688.0`
+- `@aws-sdk/client-s3`: `^3.734.0`
+- `@aws-sdk/s3-request-presigner`: `^3.734.0`
