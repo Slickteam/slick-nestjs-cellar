@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@nestjs/cli": "^11.0.5",
-    "@slickteam/prettier": "^1.1.1",
+    "@slickteam/prettier": "^1.1.2",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/node": "^22.13.13",
     "ts-loader": "^9.5.2",
