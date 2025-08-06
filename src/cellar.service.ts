@@ -4,6 +4,7 @@ import {
   HeadObjectCommand,
   HeadObjectCommandOutput,
   ListObjectsV2Command,
+  ObjectCannedACL,
   PutObjectCommand,
   S3Client,
   ServiceOutputTypes,
@@ -61,13 +62,14 @@ export class CellarService {
   public async uploadFile(
     bucketName: string,
     file: { buffer: Buffer; mimetype: string; originalname: string },
+    ACL: ObjectCannedACL = 'bucket-owner-full-control',
   ): Promise<ServiceOutputTypes> {
     return this.s3Client.send(
       new PutObjectCommand({
         Bucket: bucketName,
         Key: file.originalname,
         Body: file.buffer,
-        ACL: 'bucket-owner-full-control',
+        ACL,
         ContentType: file.mimetype,
       }),
     );
