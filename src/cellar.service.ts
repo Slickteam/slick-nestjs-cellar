@@ -1,6 +1,7 @@
 import {
   DeleteObjectCommand,
   GetObjectCommand,
+  GetObjectCommandOutput,
   HeadObjectCommand,
   HeadObjectCommandOutput,
   ListObjectsV2Command,
@@ -97,6 +98,10 @@ export class CellarService {
   public async getSignedUrl(bucketName: string, fileName: string): Promise<string> {
     const command = new GetObjectCommand({ Bucket: bucketName, Key: fileName });
     return getSignedUrl(this.s3Client, command, { expiresIn: this.timeoutSignedUrl });
+  }
+
+  public async getFile(bucketName: string, fileName: string): Promise<GetObjectCommandOutput> {
+    return this.s3Client.send(new GetObjectCommand({ Bucket: bucketName, Key: fileName }));
   }
 
   public async uploadPdfToS3(bucketName: string, fileName: string, pdfBuffer: Buffer): Promise<void | never> {
