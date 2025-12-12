@@ -12,12 +12,14 @@ npm i -S @slickteam/nestjs-cellar
 
 - In your environment file, add these lines :
 
+> ATTENTION, ADDON\_ is removed from environment variable
+
 ```conf
-CELLAR_ADDON_HOST=cellar-c2.services.clever-cloud.com
-CELLAR_ADDON_KEY_ID=
-CELLAR_ADDON_KEY_SECRET=
-CELLAR_ADDON_REGION=fr
-CELLAR_ADDON_TIMEOUT_SIGNED_URL=3600
+CELLAR_HOST=cellar-c2.services.clever-cloud.com
+CELLAR_KEY_ID=
+CELLAR_KEY_SECRET=
+CELLAR_REGION=fr
+CELLAR_TIMEOUT_SIGNED_URL=3600
 ```
 
 - In module where you want use this module, add this :
@@ -36,10 +38,10 @@ class ExempleModule {}
 
 Nestjs
 
-- `@nestjs/common`: `^11.0.12`
-- `@nestjs/config`: `^4.0.1`
+- `@nestjs/common`: `^11.0`
+- `@nestjs/config`: `^4.0`
 
 Cellar (AWS)
 
-- `@aws-sdk/client-s3`: `^3.774.0`
-- `@aws-sdk/s3-request-presigner`: `^3.774.0`
+- `@aws-sdk/client-s3`: `^3.948`
+- `@aws-sdk/s3-request-presigner`: `^3.948`

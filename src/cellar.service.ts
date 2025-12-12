@@ -25,15 +25,15 @@ export class CellarService {
   public readonly s3Client: S3Client;
 
   public constructor(private configService: ConfigService) {
-    this.s3EndPoint = `https://${this.configService.getOrThrow('CELLAR_ADDON_HOST')}`;
+    this.s3EndPoint = `https://${this.configService.getOrThrow('CELLAR_HOST')}`;
     const regionBucket = this.configService.get('CELLAR_REGION') ?? 'fr';
     this.timeoutSignedUrl = this.configService.get<number>('CELLAR_TIMEOUT_SIGNED_URL') ?? 3600;
     this.s3Client = new S3Client({
       endpoint: this.s3EndPoint,
       region: regionBucket,
       credentials: {
-        accessKeyId: this.configService.getOrThrow('CELLAR_ADDON_KEY_ID'),
-        secretAccessKey: this.configService.getOrThrow('CELLAR_ADDON_KEY_SECRET'),
+        accessKeyId: this.configService.getOrThrow('CELLAR_KEY_ID'),
+        secretAccessKey: this.configService.getOrThrow('CELLAR_KEY_SECRET'),
       },
     });
   }
@@ -104,6 +104,9 @@ export class CellarService {
     return this.s3Client.send(new GetObjectCommand({ Bucket: bucketName, Key: fileName }));
   }
 
+  /**
+   * @deprecated
+   */
   public async uploadPdfToS3(bucketName: string, fileName: string, pdfBuffer: Buffer): Promise<void | never> {
     await this.uploadFile(bucketName, {
       buffer: pdfBuffer,
@@ -112,6 +115,9 @@ export class CellarService {
     });
   }
 
+  /**
+   * @deprecated
+   */
   public async downloadPdfFromS3(bucketName: string, fileName: string): Promise<Buffer | never> {
     const resultCommand = await this.s3Client.send(new GetObjectCommand({ Bucket: bucketName, Key: fileName }));
     const rawFileBytes = await resultCommand.Body?.transformToByteArray();
