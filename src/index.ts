@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 
-import { CellarBucketObjectListContentItem } from './cellar.interface';
+import { CellarBucketObjectListContentItem, CellarUploadFile } from './cellar.interface';
 import { CellarService } from './cellar.service';
 
 @Module({
@@ -9,4 +9,4 @@ import { CellarService } from './cellar.service';
 })
 class CellarModule {}
 
-export { CellarModule, CellarService, CellarBucketObjectListContentItem };
+export { CellarModule, CellarService, CellarBucketObjectListContentItem, CellarUploadFile };
