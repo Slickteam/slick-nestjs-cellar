@@ -1,7 +1,7 @@
 {
   "name": "@slickteam/nestjs-cellar",
   "description": "Module for Cellar with Nestjs",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "keywords": [
     "Slickteam",
     "Nestjs",
@@ -37,20 +37,20 @@
     "prettier:fix": "slick-prettier --cache --write ."
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "3.981.0",
-    "@aws-sdk/s3-request-presigner": "3.981.0",
-    "@nestjs/common": "11.1.12",
-    "@nestjs/config": "4.0.2"
+    "@aws-sdk/client-s3": "3.985.0",
+    "@aws-sdk/s3-request-presigner": "3.985.0",
+    "@nestjs/common": "11.1.13",
+    "@nestjs/config": "4.0.3"
   },
   "devDependencies": {
     "@nestjs/cli": "11.0.16",
     "@slickteam/prettier": "2.0.3",
-    "@types/node": "24.10.10",
+    "@types/node": "24.10.12",
     "ts-loader": "9.5.4",
     "ts-node": "10.9.2",
     "tsconfig-paths": "4.2.0",
     "typescript": "5.9.3"
   },
   "prettier": "@slickteam/prettier",
-  "packageManager": "pnpm@10.28.2"
+  "packageManager": "pnpm@10.29.2"
 }
